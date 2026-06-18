@@ -1,0 +1,38 @@
+What is a Network?
+A network is a collection of devices (computers, phones, servers) connected together to share data and resources. Networks range from two laptops sharing files to the global Internet connecting billions of devices.
+
+Core Network Components
+1. Nodes / End Devices
+These are the devices that send or receive data — desktops, laptops, smartphones, printers, servers. Every node has a unique MAC address (hardware level) and usually an IP address (logical level) to identify it on the network.
+2. Network Interface Card (NIC)
+Every device has a NIC — a hardware chip that lets it physically connect to a network. It can be wired (Ethernet port) or wireless (Wi-Fi). The NIC has a burned-in MAC address like 00:1A:2B:3C:4D:5E.
+3. Router
+A router connects different networks together — most commonly your home network (LAN) to the Internet (WAN). It reads IP addresses and decides the best path to forward each packet. Routers also assign IP addresses via DHCP and perform NAT (Network Address Translation) so multiple devices share one public IP.
+4. Switch
+A switch connects devices within the same network (LAN). Unlike a hub (which blindly broadcasts to all ports), a switch is intelligent — it learns which MAC address is on which port and sends traffic only to the correct device. This makes LANs faster and more secure.
+5. Hub (older technology)
+A hub is the dumb predecessor to the switch. It broadcasts every packet to every connected device, letting the device itself decide if the packet is for it. This wastes bandwidth and is a security concern. Modern networks use switches instead.
+6. Firewall
+A firewall monitors and filters incoming and outgoing traffic based on rules. It can be hardware (a dedicated device) or software (like Windows Firewall). It blocks unauthorized access, malicious packets, and unwanted connections based on IP, port, and protocol rules.
+7. Wireless Access Point (WAP)
+A WAP transmits Wi-Fi signals so wireless devices can join the wired network. In homes, the router and WAP are usually combined into one box. In offices, multiple WAPs create coverage across large areas, all feeding into the main switch.
+8. Modem
+A modem (modulator-demodulator) converts digital signals from your computer into the analog signals that travel over telephone lines or cable, and converts them back. Your ISP provides this device. In modern setups, a modem-router combo handles both functions.
+9. Server
+A server is a device (or software) that provides services to other devices (clients). Types include web servers (host websites), file servers (share storage), DNS servers (translate domain names to IPs), DHCP servers (assign IP addresses), and mail servers.
+10. Cables and Physical Media
+The physical layer carries raw bits. Common types: Ethernet (Cat5e/Cat6) cables for wired LANs, fiber optic cables for high-speed long-distance links, and coaxial cables used by ISPs. Wireless (Wi-Fi, Bluetooth) uses radio waves instead.
+
+Key Networking Concepts
+IP Address — A logical address like 192.168.1.5 that identifies a device on a network. IPv4 uses 32-bit addresses; IPv6 uses 128-bit.
+MAC Address — A hardware address burned into every NIC. Used within a local network to deliver frames.
+DNS (Domain Name System) — Translates human-friendly names like google.com into IP addresses machines can route to.
+DHCP — Automatically assigns IP addresses to devices joining a network, so you don't have to configure each one manually.
+Protocol — A set of rules for communication. TCP/IP is the foundation of the Internet; HTTP handles web pages; FTP handles file transfers; SMTP handles email.
+Bandwidth vs Latency — Bandwidth is how much data can flow per second (like a pipe's width). Latency is how long it takes a single packet to travel from source to destination (like the pipe's length).
+LAN vs WAN — A Local Area Network (LAN) covers a building or campus. A Wide Area Network (WAN) spans cities or countries — the Internet is the world's largest WAN.
+
+The OSI Model (7 Layers)
+The OSI model is a framework that describes how data flows through a network in 7 layers, each with a specific job:
+LayerNameRoleExample7ApplicationUser-facing protocolsHTTP, FTP, DNS6PresentationEncoding, encryptionSSL/TLS, JPEG5SessionManages sessionsNetBIOS, RPC4TransportEnd-to-end deliveryTCP, UDP3NetworkRouting between networksIP, ICMP2Data LinkNode-to-node deliveryEthernet, MAC1PhysicalRaw bits on the wireCables, radio waves
+Data travels down the layers when sending and up the layers when receiving, with each layer adding or removing its own header.
