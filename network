@@ -24,15 +24,47 @@ A server is a device (or software) that provides services to other devices (clie
 The physical layer carries raw bits. Common types: Ethernet (Cat5e/Cat6) cables for wired LANs, fiber optic cables for high-speed long-distance links, and coaxial cables used by ISPs. Wireless (Wi-Fi, Bluetooth) uses radio waves instead.
 
 Key Networking Concepts
+
 IP Address — A logical address like 192.168.1.5 that identifies a device on a network. IPv4 uses 32-bit addresses; IPv6 uses 128-bit.
+
 MAC Address — A hardware address burned into every NIC. Used within a local network to deliver frames.
+
 DNS (Domain Name System) — Translates human-friendly names like google.com into IP addresses machines can route to.
+
 DHCP — Automatically assigns IP addresses to devices joining a network, so you don't have to configure each one manually.
+
 Protocol — A set of rules for communication. TCP/IP is the foundation of the Internet; HTTP handles web pages; FTP handles file transfers; SMTP handles email.
+
 Bandwidth vs Latency — Bandwidth is how much data can flow per second (like a pipe's width). Latency is how long it takes a single packet to travel from source to destination (like the pipe's length).
+
 LAN vs WAN — A Local Area Network (LAN) covers a building or campus. A Wide Area Network (WAN) spans cities or countries — the Internet is the world's largest WAN.
 
-The OSI Model (7 Layers)
-The OSI model is a framework that describes how data flows through a network in 7 layers, each with a specific job:
-LayerNameRoleExample7ApplicationUser-facing protocolsHTTP, FTP, DNS6PresentationEncoding, encryptionSSL/TLS, JPEG5SessionManages sessionsNetBIOS, RPC4TransportEnd-to-end deliveryTCP, UDP3NetworkRouting between networksIP, ICMP2Data LinkNode-to-node deliveryEthernet, MAC1PhysicalRaw bits on the wireCables, radio waves
-Data travels down the layers when sending and up the layers when receiving, with each layer adding or removing its own header.
+
+
+
+1. Network Fundamentals
+A network is simply a group of devices (computers, phones, printers) connected together so they can share data. Think of it like roads connecting cities — the devices are cities, and the cables/Wi-Fi are the roads. Every network needs three things: devices to communicate, a physical link (cable or wireless), and protocols (rules so everyone "speaks the same language").
+
+2. IP Address — Internet Protocol Address
+Every device on a network gets a unique number called an IP address — just like every house has a unique postal address. Without it, data wouldn't know where to go.
+There are two types: IPv4 looks like 192.168.1.10 (4 numbers, 0–255 each) and IPv6 looks like 2001:db8::1 (longer, for more devices). There are also public IPs (visible on the Internet) and private IPs (used only inside your home/office network).
+
+3. DNS — Domain Name System
+DNS is the Internet's phone book. Humans remember names like google.com, but computers need an IP address like 142.250.80.46. DNS automatically translates one to the other the moment you type a web address — so you never have to memorize numbers. Without DNS, you'd have to type the raw IP address into your browser every time.
+
+4. DHCP — Dynamic Host Configuration Protocol
+DHCP is the system that automatically gives every device an IP address when it connects to a network. Without DHCP, a network admin would have to manually assign an IP to every single device. With DHCP, it's automatic — your phone joins Wi-Fi, the router's DHCP server hands it an IP, and you're connected. Simple. 
+
+
+
+The 5 key fundamentals explained simply
+
+Packets — When you send data, it gets cut into small pieces called packets (like cutting a big letter into many postcards). Each packet travels independently and gets reassembled at the destination. This is why the Internet can carry millions of conversations at once.
+
+Bandwidth — Think of it like a water pipe. A wider pipe moves more water per second. Higher bandwidth = more data per second. Measured in Mbps (megabits per second) or Gbps.
+
+Latency — The delay between sending something and it arriving. Even at light speed, data from India to the USA takes ~80ms. Lower latency = faster feeling connections. This is why gaming servers are placed near players.
+
+Client vs Server — Almost everything on the Internet works this way. You (the client) ask for something, the server provides it. Your browser is a client. Google's computers are servers. Servers run 24/7 waiting for requests.
+
+Protocols — The agreed rules so all devices speak the same language. TCP/IP is the foundation of the Internet. HTTP is for web pages. SMTP is for email. Without protocols, a Windows PC and a Mac couldn't communicate at all.
